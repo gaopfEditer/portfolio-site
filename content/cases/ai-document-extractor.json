@@ -1,0 +1,24 @@
+{
+  "slug": "ai-document-extractor",
+  "title": "AI Document Extractor",
+  "summary": "PDFs and emails become structured rows in Google Sheets, with expiry alerts and human review for uncertain fields.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/ai-document-extractor/dashboard.png",
+  "problem": "Teams tracked insurance certificates and invoices by hand and often missed expiry and due dates.",
+  "solution": "An LLM reads PDFs and emails, writes fields to Google Sheets, deterministic code sets expiry status and sends reminder emails, and low-confidence items are flagged for human review. Also shipped an n8n workflow version for no-code teams.",
+  "stack": [
+    "Python",
+    "FastAPI",
+    "OpenAI / Anthropic structured output",
+    "Google Sheets",
+    "SMTP",
+    "Docker",
+    "n8n"
+  ],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/ai-document-extractor",
+    "live": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "ai-app-launch-rescue",
+  "title": "AI App Launch Rescue",
+  "summary": "Audit, fix, and deploy a half-built AI-generated web app with a clear report first.",
+  "status": "in-progress",
+  "draft": true,
+  "featured": false,
+  "image": "/work/placeholders/in-progress.svg",
+  "problem": "A startup had a Lovable/Cursor-built MVP that broke in production and blocked launch.",
+  "solution": "Fixed auth, API errors, and deployment config; delivered a short audit report and a stable Vercel deploy.",
+  "stack": ["Next.js", "TypeScript", "Vercel", "PostgreSQL"],
+  "links": {
+    "repo": "",
+    "live": ""
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "website-ai-assistant",
+  "title": "Website AI Assistant",
+  "summary": "Chatbot answers from company docs and saves qualified leads to a CRM.",
+  "status": "in-progress",
+  "draft": true,
+  "featured": false,
+  "image": "/work/placeholders/in-progress.svg",
+  "problem": "Support spent hours answering the same product questions on the website.",
+  "solution": "RAG chatbot over uploaded docs, with lead capture synced to the client's CRM via webhook.",
+  "stack": ["Node.js", "OpenAI", "Vector store", "Webhooks", "React"],
+  "links": {
+    "repo": "",
+    "live": ""
+  }
+}
