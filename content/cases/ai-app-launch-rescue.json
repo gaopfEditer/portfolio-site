@@ -1,16 +1,26 @@
 {
   "slug": "ai-app-launch-rescue",
-  "title": "AI App Launch Rescue",
-  "summary": "Audit, fix, and deploy a half-built AI-generated web app with a clear report first.",
-  "status": "in-progress",
-  "draft": true,
-  "featured": false,
-  "image": "/work/placeholders/in-progress.svg",
-  "problem": "A startup had a Lovable/Cursor-built MVP that broke in production and blocked launch.",
-  "solution": "Fixed auth, API errors, and deployment config; delivered a short audit report and a stable Vercel deploy.",
-  "stack": ["Next.js", "TypeScript", "Vercel", "PostgreSQL"],
+  "title": "AI App Launch Rescue (NoteFlow)",
+  "summary": "Portfolio demo: took a half-built AI-generated notes app and made it safe to launch, with a written audit report.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/ai-app-launch-rescue/launch-rescue-after.png",
+  "problem": "AI-generated apps (Lovable/Bolt-style) often work in a demo but are unsafe to launch. NoteFlow was a half-built notes app with AI summaries—typical of that pattern: secrets in the client, missing auth, and XSS risk.",
+  "solution": "Self-built portfolio demo aligned with my Fix & launch service: static scan found 7 issues before remediation and 0 after. Critical fixes included an OpenAI API key exposed in the browser bundle (VITE_ env var), OpenAI called from the browser, XSS via dangerouslySetInnerHTML, and no auth for shared notes. I moved AI calls server-side, added JWT auth and rate limiting, and added tests (5 unit tests pass; 2/2 e2e pass). Lighthouse accessibility improved from 0.83 to 1.00. Deliverables include the production-ready app and a written audit report.",
+  "stack": [
+    "Vite",
+    "React",
+    "TypeScript",
+    "Node.js API",
+    "JWT auth",
+    "OpenAI (server-side)",
+    "Vitest",
+    "Playwright",
+    "Vercel"
+  ],
   "links": {
-    "repo": "",
-    "live": ""
+    "repo": "https://github.com/gaopfEditer/ai-app-launch-rescue",
+    "live": "https://ai-app-launch-rescue.vercel.app"
   }
 }

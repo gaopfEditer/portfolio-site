@@ -1,0 +1,25 @@
+{
+  "slug": "contractor-lead-engine",
+  "title": "Contractor Lead Engine (California)",
+  "summary": "Portfolio demo for agencies and SaaS selling to HVAC, plumbing, and electrical contractors: verified, sourced leads with human-ready outreach drafts.",
+  "status": "published",
+  "draft": false,
+  "featured": false,
+  "image": "/work/contractor-lead-engine/lead-detail.png",
+  "problem": "Outbound teams targeting licensed contractors need leads that are provably tied to public license data, scored with evidence, and safe to email—not scraped guesswork with unverified contacts.",
+  "solution": "Self-built portfolio demo for automation and lead generation. Uses a real public subset of California CSLB license data (Alameda and Sacramento counties); every fact carries its source link; owner names are cross-checked against CSLB personnel. Leads are scored Hot/Warm/Cold with evidence, a personalized first line is drafted for human approval, and exports include only verified emails. Personal names are masked in the public demo. Demo funnel: 120 licenses → 93 → 58 hard ICP fit → 27 with OK email → 28 Hot/Warm; 20 exportable leads (Hot 13, Warm 15, Cold 30).",
+  "stack": [
+    "TypeScript",
+    "React",
+    "CSLB public data",
+    "Lead scoring",
+    "Source-linked facts",
+    "Email verification gate",
+    "CSV export",
+    "Vercel"
+  ],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/lead-engine-demo",
+    "live": "https://lead-engine-demo-liart.vercel.app"
+  }
+}
