@@ -6,7 +6,7 @@ import { siteConfig } from "@/site.config";
 
 const nav = [
   { href: "/#services", label: "Services" },
-  { href: "/#work", label: "Work" },
+  { href: "/work/", label: "Work" },
   { href: "/#process", label: "How I work" },
   { href: "/#about", label: "About" },
   { href: "/#contact", label: "Contact" },

@@ -35,7 +35,7 @@ export default async function CaseStudyPage({ params }: Props) {
     <article className="section-padding">
       <div className="mx-auto max-w-3xl">
         <Link
-          href="/#work"
+          href="/work/"
           className="text-sm font-medium text-brand-700 hover:underline dark:text-brand-400"
         >
           ← Back to work
