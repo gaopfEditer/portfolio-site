@@ -47,7 +47,6 @@ export function Services() {
               </p>
               <p className="mt-6 text-sm font-medium text-brand-700 dark:text-brand-400">
                 Starting {service.price}
-                <span className="font-normal text-slate-500 dark:text-slate-500"> · placeholder</span>
               </p>
             </li>
           ))}

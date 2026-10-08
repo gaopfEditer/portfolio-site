@@ -151,9 +151,7 @@ export function ContactForm() {
 
             {!useFormspree && (
               <p className="text-xs text-slate-500 dark:text-slate-400">
-                Formspree is not configured yet. Submit will open your email app (mailto). Add{" "}
-                <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">formspreeEndpoint</code> in{" "}
-                <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">site.config.ts</code>.
+                Submit opens your email app with your message pre-filled.
               </p>
             )}
 

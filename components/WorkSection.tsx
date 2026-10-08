@@ -13,13 +13,12 @@ export function WorkSection({ cases }: Props) {
       <div className="mx-auto max-w-5xl">
         <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Work</h2>
         <p className="mt-3 max-w-2xl text-slate-600 dark:text-slate-300">
-          Selected projects. Add new case studies as JSON files in{" "}
-          <code className="rounded bg-slate-100 px-1.5 py-0.5 text-sm dark:bg-slate-800">content/cases/</code>.
+          Selected portfolio demos — each one has a live demo and public code.
         </p>
 
         {siteConfig.showReviewsPlaceholder && (
           <p className="mt-6 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-400">
-            Client reviews coming soon — meanwhile, see the case study below or hire on{" "}
+            Upwork client reviews are on my profile — browse the demos below or hire me on{" "}
             <a
               href={siteConfig.links.upwork}
               className="font-medium text-brand-700 underline dark:text-brand-400"
