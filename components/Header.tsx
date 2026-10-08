@@ -2,18 +2,22 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { LanguageSwitch } from "@/components/LanguageSwitch";
+import { useLanguage } from "@/components/LanguageProvider";
 import { siteConfig } from "@/site.config";
-
-const nav = [
-  { href: "/#services", label: "Services" },
-  { href: "/work/", label: "Work" },
-  { href: "/#process", label: "How I work" },
-  { href: "/#about", label: "About" },
-  { href: "/#contact", label: "Contact" },
-];
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const { t } = useLanguage();
+  const n = t.nav;
+
+  const nav = [
+    { href: "/#services", label: n.services },
+    { href: "/work/", label: n.work },
+    { href: "/#process", label: n.process },
+    { href: "/#about", label: n.about },
+    { href: "/#contact", label: n.contact },
+  ];
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-slate-50/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90">
@@ -23,13 +27,10 @@ export function Header() {
           className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white"
         >
           {siteConfig.displayName}
-          <span className="hidden sm:inline text-slate-500 font-normal dark:text-slate-400">
-            {" "}
-            · Automation dev
-          </span>
+          <span className="hidden sm:inline text-slate-500 font-normal dark:text-slate-400">{n.headerSubtitle}</span>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-4 md:flex" aria-label="Main">
           {nav.map((item) => (
             <Link
               key={item.href}
@@ -39,32 +40,36 @@ export function Header() {
               {item.label}
             </Link>
           ))}
+          <LanguageSwitch />
           <Link
             href="/#contact"
             className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-brand-700"
           >
-            Get a quote
+            {n.getQuote}
           </Link>
         </nav>
 
-        <button
-          type="button"
-          className="inline-flex items-center justify-center rounded-lg border border-slate-200 p-2 text-slate-700 md:hidden dark:border-slate-700 dark:text-slate-200"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span className="sr-only">Menu</span>
-          {open ? (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <LanguageSwitch />
+          <button
+            type="button"
+            className="inline-flex items-center justify-center rounded-lg border border-slate-200 p-2 text-slate-700 dark:border-slate-700 dark:text-slate-200"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span className="sr-only">Menu</span>
+            {open ? (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {open && (
@@ -91,7 +96,7 @@ export function Header() {
                 className="inline-block rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white"
                 onClick={() => setOpen(false)}
               >
-                Get a quote
+                {n.getQuote}
               </Link>
             </li>
           </ul>

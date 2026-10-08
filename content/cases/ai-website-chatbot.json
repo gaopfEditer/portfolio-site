@@ -23,5 +23,11 @@
   "links": {
     "repo": "https://github.com/gaopfEditer/ai-website-chatbot",
     "live": "https://ai-website-chatbot-six.vercel.app"
+  },
+  "zh": {
+    "title": "AI 网站客服（SiteBot）",
+    "summary": "作品集演示：网站客服只根据公司自己的文档回答并注明出处；文档里没有的问题不猜，改为留下联系方式；一行脚本嵌入网站。",
+    "problem": "访客反复问同一些操作问题，而通用聊天机器人会猜，不会严格按公司已经公开的内容回答。",
+    "solution": "自建作品集演示（虚构牙科诊所），对应自动化和 AI 集成。答案来自上传的公司文档，并注明出处；文档里没有就不猜，改为收集姓名、邮箱和需求。有管理页看留资，一行脚本嵌入任何网站，没有大模型密钥也能离线跑。演示里的真实对话：问「周六几点开门？」答「Saturday: 9:00 AM – 1:00 PM (2nd & 4th Sat only)」，出处是 Office hours。"
   }
 }

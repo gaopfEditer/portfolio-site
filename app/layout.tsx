@@ -4,6 +4,8 @@ import "./globals.css";
 import { siteConfig } from "@/site.config";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { LanguageProvider } from "@/components/LanguageProvider";
+import { SkipToContent } from "@/components/SkipToContent";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,17 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="min-h-screen font-sans">
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-4 focus:py-2 focus:shadow-lg dark:focus:bg-slate-900"
-        >
-          Skip to content
-        </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
+        <LanguageProvider>
+          <SkipToContent />
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

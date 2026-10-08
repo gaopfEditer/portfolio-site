@@ -1,32 +1,15 @@
 import fs from "fs";
 import path from "path";
+import type { CaseStudy } from "@/lib/caseStudy";
 
-export type CaseStudy = {
-  slug: string;
-  title: string;
-  summary: string;
-  status: "published" | "in-progress";
-  draft: boolean;
-  featured: boolean;
-  image: string;
-  /** Optional second screenshot on the case page (e.g. admin UI). */
-  secondaryImage?: string;
-  problem: string;
-  solution: string;
-  stack: string[];
-  links: {
-    repo: string;
-    live: string;
-  };
-};
+export type { CaseStudy, CaseStudyLocaleFields, CaseStudyText } from "@/lib/caseStudy";
+export { getCaseStudyText } from "@/lib/caseStudy";
 
 const casesDirectory = path.join(process.cwd(), "content/cases");
 
 function loadAllCases(): CaseStudy[] {
   if (!fs.existsSync(casesDirectory)) return [];
-  const files = fs
-    .readdirSync(casesDirectory)
-    .filter((f) => f.endsWith(".json"));
+  const files = fs.readdirSync(casesDirectory).filter((f) => f.endsWith(".json"));
   return files
     .map((file) => {
       const raw = fs.readFileSync(path.join(casesDirectory, file), "utf8");

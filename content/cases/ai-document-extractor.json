@@ -20,5 +20,11 @@
   "links": {
     "repo": "https://github.com/gaopfEditer/ai-document-extractor",
     "live": ""
+  },
+  "zh": {
+    "title": "AI 文档提取器",
+    "summary": "PDF 和邮件变成 Google 表格里的结构化行，带到期提醒，不确定的字段交给人复核。",
+    "problem": "保险凭证和发票靠人工抄进表格，到期日和付款日常常漏掉。",
+    "solution": "大模型读 PDF 和邮件，把字段写进 Google 表格；到期状态和提醒邮件由普通代码决定，不交给模型；没把握的字段标出来给人复核。另外做了一版 n8n 工作流，给不写代码的团队用。"
   }
 }
