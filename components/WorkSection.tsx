@@ -18,7 +18,7 @@ export function WorkSection({ cases }: Props) {
 
         {siteConfig.showReviewsPlaceholder && (
           <p className="mt-6 rounded-lg border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-400">
-            Upwork client reviews are on my profile — browse the demos below or hire me on{" "}
+            Browse the demos below, or hire me on{" "}
             <a
               href={siteConfig.links.upwork}
               className="font-medium text-brand-700 underline dark:text-brand-400"
