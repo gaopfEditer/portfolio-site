@@ -56,6 +56,18 @@ export default async function CaseStudyPage({ params }: Props) {
           <Image src={item.image} alt="" fill className="object-cover" priority sizes="(max-width: 768px) 100vw, 768px" />
         </div>
 
+        {item.secondaryImage ? (
+          <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800">
+            <Image
+              src={item.secondaryImage}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </div>
+        ) : null}
+
         <div className="prose prose-slate mt-10 max-w-none dark:prose-invert">
           <h2 className="text-xl font-semibold">Problem</h2>
           <p className="text-slate-600 dark:text-slate-300">{item.problem}</p>

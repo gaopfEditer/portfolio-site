@@ -9,6 +9,8 @@ export type CaseStudy = {
   draft: boolean;
   featured: boolean;
   image: string;
+  /** Optional second screenshot on the case page (e.g. admin UI). */
+  secondaryImage?: string;
   problem: string;
   solution: string;
   stack: string[];

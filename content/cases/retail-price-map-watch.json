@@ -7,7 +7,7 @@
   "featured": false,
   "image": "/work/retail-price-map-watch/price-overview.png",
   "problem": "Brands need to watch reseller pricing and minimum advertised price (MAP) policy, but common pain points—seen in real Upwork posts and reviews of tools like Prisync—include alert noise, wrong product matches, and false MAP violations from coupons or bundles.",
-  "solution": "Self-built portfolio demo (coffee equipment niche) for automation, scraping, and dashboards. Uses synthetic retailers (not live merchant data). Features include product matching with a review queue, a MAP board with evidence, alert rules with thresholds and confirmation, source health monitoring, and CSV export. Demo configuration: 60 tracked SKUs; over 7 days, 3,133 change signals were detected but only 2 alerts were pushed after thresholds and confirmation; 1 open MAP violation and 1 MAP trap filtered.",
+  "solution": "Self-built portfolio demo (coffee equipment niche) for automation, scraping, and dashboards. Uses synthetic retailers (not live merchant data). Features include product matching with a review queue, a MAP board with evidence, alert rules with thresholds and confirmation, source health monitoring, and CSV export. Demo configuration: 60 tracked SKUs; the demo run spans 14 days. 3,133 change signals detected in the demo run; only 2 alerts pushed after thresholds and confirmation. 3,131 change signals suppressed over the last 7 days (noise filtered before alert rules). 1 open MAP violation and 1 MAP trap filtered.",
   "stack": [
     "TypeScript",
     "React",
