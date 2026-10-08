@@ -13,7 +13,7 @@ export const siteConfig = {
   timezone: "Asia/Shanghai (UTC+8)",
   preferredLanguage: "English (written communication)",
 
-  email: "your.email@example.com", // TODO: replace with your real email
+  email: "f1241961245@gmail.com",
   siteUrl: "https://portfolio-site-orpin-three-91.vercel.app",
 
   links: {

@@ -1,16 +1,16 @@
 {
   "slug": "website-ai-assistant",
-  "title": "Website AI Assistant",
-  "summary": "Chatbot answers from company docs and saves qualified leads to a CRM.",
-  "status": "in-progress",
-  "draft": true,
-  "featured": false,
-  "image": "/work/placeholders/in-progress.svg",
-  "problem": "Support spent hours answering the same product questions on the website.",
-  "solution": "RAG chatbot over uploaded docs, with lead capture synced to the client's CRM via webhook.",
-  "stack": ["Node.js", "OpenAI", "Vector store", "Webhooks", "React"],
+  "title": "Website AI Assistant (SiteBot)",
+  "summary": "Embeddable site chatbot that answers from the business’s own docs, cites sources, and captures leads when it cannot help.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/demo-thumbnail.svg",
+  "problem": "Small business sites get the same questions repeatedly, but owners cannot staff live chat around the clock—and generic bots often invent answers.",
+  "solution": "Built SiteBot: ingest Markdown/PDF/HTML into a retrieval index, answer with citations (offline search by default, optional OpenAI-compatible LLM), show an honest “I don’t know” plus lead capture, and embed with one script tag. Includes admin for conversations, leads, and re-indexing.",
+  "stack": ["Node.js", "Next.js", "MiniSearch", "OpenAI-compatible LLM (optional)", "SQLite", "Webhooks"],
   "links": {
-    "repo": "",
-    "live": ""
+    "repo": "https://github.com/gaopfEditer/ai-website-chatbot",
+    "live": "https://ai-website-chatbot-six.vercel.app"
   }
 }

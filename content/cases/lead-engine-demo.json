@@ -1,0 +1,16 @@
+{
+  "slug": "lead-engine-demo",
+  "title": "Contractor Lead Engine",
+  "summary": "Self-hosted pipeline that builds ICP-scored contractor leads from public license data and company sites—with verified contacts and evidence-linked outreach drafts.",
+  "status": "published",
+  "draft": false,
+  "featured": false,
+  "image": "/work/demo-thumbnail.svg",
+  "problem": "Outbound teams waste budget on bounced emails, duplicates, and poor-fit companies—and need a small sample they can trust before scaling a list.",
+  "solution": "FastAPI app ingests California CSLB-style license records, dedupes by domain/phone/address, crawls sites for owner contacts, verifies email status (ok-only export by default), scores fit against YAML ICP rules with LLM grounding, and drafts a first line tied to a verifiable fact. Ships CSV/JSON quality reports and optional HubSpot or Sheets adapters.",
+  "stack": ["Python", "FastAPI", "Playwright", "SQLite / PostgreSQL", "OpenAI-compatible LLM", "Docker"],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/lead-engine-demo",
+    "live": "https://lead-engine-demo-liart.vercel.app"
+  }
+}

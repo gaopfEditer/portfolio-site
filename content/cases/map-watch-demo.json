@@ -1,0 +1,16 @@
+{
+  "slug": "map-watch-demo",
+  "title": "Retail Price & MAP Watch",
+  "summary": "Scheduled competitor price monitoring with smart matching, noise filtering, MAP breach evidence, and alerts only when a change is meaningful.",
+  "status": "published",
+  "draft": false,
+  "featured": false,
+  "image": "/work/demo-thumbnail.svg",
+  "problem": "Brands drown in price alerts from penny moves, bad cross-site matches, and MAP violations that turn out to be used listings or parse failures.",
+  "solution": "Monitor multiple retailer adapters on a schedule, match SKUs with GTIN/MPN plus guarded fuzzy titles (conflicts go to a review queue), confirm significant moves before alerting, and attach screenshot evidence for MAP breaches. Includes source health for rate limits and challenge pages, plus CSV/Excel export and Telegram/Slack/email hooks. Demo runs on synthetic sandbox retailers offline.",
+  "stack": ["Python", "FastAPI", "Playwright", "SQLite / PostgreSQL", "Docker"],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/price-monitor-demo",
+    "live": "https://price-monitor-demo-lac.vercel.app"
+  }
+}
