@@ -14,7 +14,7 @@ export const siteConfig = {
   preferredLanguage: "English (written communication)",
 
   email: "your.email@example.com", // TODO: replace with your real email
-  siteUrl: "https://your-domain.vercel.app", // TODO: set after Vercel deploy
+  siteUrl: "https://portfolio-site-orpin-three-91.vercel.app",
 
   links: {
     upwork: "https://www.upwork.com/freelancers/~01c29e20dd0d9fb0f8",
