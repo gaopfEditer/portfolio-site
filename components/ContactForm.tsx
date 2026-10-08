@@ -149,21 +149,27 @@ export function ContactForm() {
               </div>
             </div>
 
-            {!useFormspree && (
-              <p className="text-xs text-slate-500 dark:text-slate-400">
-                Formspree is not configured yet. Submit will open your email app (mailto). Add{" "}
-                <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">formspreeEndpoint</code> in{" "}
-                <code className="rounded bg-slate-100 px-1 dark:bg-slate-800">site.config.ts</code>.
-              </p>
-            )}
-
             <button
               type="submit"
               disabled={status === "sending"}
               className="rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-700 disabled:opacity-60"
             >
-              {status === "sending" ? "Sending…" : "Send message"}
+              {useFormspree
+                ? status === "sending"
+                  ? "Sending…"
+                  : "Send message"
+                : "Email project details"}
             </button>
+
+            {!useFormspree && (
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Opens your email app with this form pre-filled, or write directly to{" "}
+                <a href={`mailto:${email}`} className="font-medium text-brand-700 underline dark:text-brand-400">
+                  {email}
+                </a>
+                .
+              </p>
+            )}
 
             {status === "sent" && (
               <p className="text-sm text-green-700 dark:text-green-400" role="status">
