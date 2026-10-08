@@ -9,14 +9,15 @@
   "problem": "Outbound teams targeting licensed contractors need leads that are provably tied to public license data, scored with evidence, and safe to email—not scraped guesswork with unverified contacts.",
   "solution": "Self-built portfolio demo for automation and lead generation. Uses a real public subset of California CSLB license data (Alameda and Sacramento counties); every fact carries its source link; owner names are cross-checked against CSLB personnel. Company websites in the demo are synthetic; email verification runs in mock mode (production would plug in a real verification service). Leads are scored Hot/Warm/Cold with evidence, a personalized first line is drafted for human approval, and exports include only verified emails. Personal names are masked in the public demo. Demo funnel: 120 licenses → 93 → 58 hard ICP fit. Separately: 27 with an OK email; 28 Hot/Warm. 20 exportable leads (Hot 13, Warm 15, Cold 30).",
   "stack": [
-    "TypeScript",
-    "React",
+    "Python",
+    "FastAPI",
+    "Jinja2",
+    "SQLAlchemy",
+    "SQLite",
+    "httpx & selectolax",
     "CSLB public data",
     "Lead scoring",
-    "Source-linked facts",
-    "Email verification gate",
-    "CSV export",
-    "Vercel"
+    "CSV export"
   ],
   "links": {
     "repo": "https://github.com/gaopfEditer/lead-engine-demo",

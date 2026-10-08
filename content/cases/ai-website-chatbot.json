@@ -10,13 +10,15 @@
   "problem": "Website visitors ask the same operational questions repeatedly, and generic chatbots guess instead of staying faithful to what the business actually published.",
   "solution": "Self-built portfolio demo (fictional dental clinic) for workflow automation & AI integration: answers are grounded in uploaded business documents with a cited source line, refuses to guess when the answer is not in the docs, and instead captures a lead (name, email, need). Includes an admin page for captured leads, embeds on any site with one script tag, and can run offline without an LLM API key. Example exchange from the demo docs: Q “When are you open on Saturday?” → A “Saturday: 9:00 AM – 1:00 PM (2nd & 4th Sat only)” with source Office hours.",
   "stack": [
-    "Node.js",
+    "Next.js",
+    "TypeScript",
     "React",
+    "MiniSearch",
+    "SQLite (better-sqlite3)",
+    "Zod",
     "Document-grounded Q&A",
     "Lead capture",
-    "Embeddable widget",
-    "Admin dashboard",
-    "Vercel"
+    "Embeddable widget"
   ],
   "links": {
     "repo": "https://github.com/gaopfEditer/ai-website-chatbot",
