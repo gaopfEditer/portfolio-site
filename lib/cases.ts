@@ -15,7 +15,10 @@ function loadAllCases(): CaseStudy[] {
       const raw = fs.readFileSync(path.join(casesDirectory, file), "utf8");
       return JSON.parse(raw) as CaseStudy;
     })
-    .sort((a, b) => a.title.localeCompare(b.title));
+    .sort((a, b) => {
+      if (a.featured !== b.featured) return a.featured ? -1 : 1;
+      return a.title.localeCompare(b.title);
+    });
 }
 
 /** Cases shown on the site (draft: false). */

@@ -5,6 +5,7 @@ import { siteConfig } from "@/site.config";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import { FloatingFaqAssistant } from "@/components/FloatingFaqAssistant";
 import { SkipToContent } from "@/components/SkipToContent";
 
 const inter = Inter({
@@ -54,6 +55,7 @@ export default function RootLayout({
           <Header />
           <main id="main-content">{children}</main>
           <Footer />
+          <FloatingFaqAssistant />
         </LanguageProvider>
       </body>
     </html>

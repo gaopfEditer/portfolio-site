@@ -26,4 +26,130 @@
   .section-padding {
     @apply px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24;
   }
+
+  .service-card-hidden {
+    @apply opacity-0 translate-y-4;
+  }
+
+  .service-card-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .service-card {
+    @apply transition-[opacity,transform] duration-700 ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .service-advantages {
+      @apply max-h-0 overflow-hidden border-transparent pt-0 opacity-0 transition-[max-height,opacity,padding] duration-500 ease-out;
+    }
+
+    .group:hover .service-advantages,
+    .group:focus-within .service-advantages {
+      @apply max-h-64 border-slate-100 pt-4 opacity-100 dark:border-slate-800;
+    }
+
+    .service-advantage-item {
+      @apply translate-y-1 opacity-0 transition-[transform,opacity] duration-300;
+    }
+
+    .group:hover .service-advantage-item,
+    .group:focus-within .service-advantage-item {
+      @apply translate-y-0 opacity-100;
+    }
+
+    .group:hover .service-advantage-item:nth-child(1),
+    .group:focus-within .service-advantage-item:nth-child(1) {
+      transition-delay: 50ms;
+    }
+    .group:hover .service-advantage-item:nth-child(2),
+    .group:focus-within .service-advantage-item:nth-child(2) {
+      transition-delay: 100ms;
+    }
+    .group:hover .service-advantage-item:nth-child(3),
+    .group:focus-within .service-advantage-item:nth-child(3) {
+      transition-delay: 150ms;
+    }
+    .group:hover .service-advantage-item:nth-child(4),
+    .group:focus-within .service-advantage-item:nth-child(4) {
+      transition-delay: 200ms;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .service-card-hidden {
+      @apply translate-y-0 opacity-100;
+    }
+
+    .service-card,
+    .service-advantages,
+    .service-advantage-item {
+      transition: none !important;
+    }
+
+    .faq-avatar-pulse,
+    .faq-avatar-btn {
+      animation: none !important;
+    }
+  }
+
+  @keyframes faq-bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+
+  @keyframes faq-pulse-ring {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.35;
+    }
+    50% {
+      transform: scale(1.08);
+      opacity: 0.1;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .faq-avatar-btn {
+      animation: faq-bob 3.5s ease-in-out infinite;
+    }
+
+    .faq-avatar-pulse {
+      animation: faq-pulse-ring 2.8s ease-in-out infinite;
+    }
+
+    .service-card-visible .service-check {
+      animation: service-check-pop 0.45s ease-out backwards;
+    }
+
+    .service-card-visible .service-advantage-item:nth-child(1) .service-check {
+      animation-delay: 0.35s;
+    }
+    .service-card-visible .service-advantage-item:nth-child(2) .service-check {
+      animation-delay: 0.45s;
+    }
+    .service-card-visible .service-advantage-item:nth-child(3) .service-check {
+      animation-delay: 0.55s;
+    }
+    .service-card-visible .service-advantage-item:nth-child(4) .service-check {
+      animation-delay: 0.65s;
+    }
+  }
+
+  @keyframes service-check-pop {
+    from {
+      transform: scale(0.6);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 }

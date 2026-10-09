@@ -1,0 +1,29 @@
+{
+  "slug": "booking-calendar",
+  "title": "Booking Calendar Template",
+  "summary": "Portfolio demo: week-based slot picker with confirmation flow; demo payment step skipped — booking workflow template.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/booking-calendar/calendar.png",
+  "problem": "Service businesses need a clear booking UI before connecting calendars, payments, and reminders — but AI-generated demos often skip the scheduling UX entirely.",
+  "solution": "Self-built portfolio demo (apps/booking-calendar). Pick a week, choose an available slot, confirm details, and see a success state; payment is intentionally skipped so the focus stays on the scheduling workflow. Reusable starting point for Cal.com-style integrations or custom backends.",
+  "stack": [
+    "Next.js 15",
+    "TypeScript",
+    "React",
+    "Shared UI package",
+    "Client-side slot selection",
+    "Confirmation workflow"
+  ],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/portfolio-templates/tree/main/apps/booking-calendar",
+    "live": "https://tpl-booking-calendar.vercel.app"
+  },
+  "zh": {
+    "title": "预约日历模板",
+    "summary": "作品集演示：按周选时段 + 确认流程；演示中跳过支付步骤，聚焦预约工作流。",
+    "problem": "服务业在接日历、支付和提醒之前，需要先有一套清晰的预约界面，而很多 AI 生成 demo 往往缺少排期体验。",
+    "solution": "自建作品集演示（apps/booking-calendar）。选择一周、挑选可用时段、确认信息并看到成功页；支付步骤故意跳过，突出排期流程本身。可作为接 Cal.com 类服务或自建后端的起点。"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "form-to-sheet",
+  "title": "Form → Sheets / Slack Template",
+  "summary": "Portfolio demo: contact form POST to mock JSON with optional Google Sheets and Slack hooks — Formspree-alternative style integration template.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/form-to-sheet/test-form.png",
+  "problem": "Small sites need reliable form submissions routed to spreadsheets or team chat without paying per-seat form SaaS or wiring brittle one-offs.",
+  "solution": "Self-built portfolio demo (apps/form-to-sheet). Accessible contact form submits to a mock JSON API; the template documents how to plug in Google Sheets append and Slack incoming webhooks. Shows the same integration patterns I use in workflow automation projects — own your endpoint, own your data.",
+  "stack": [
+    "Next.js 15",
+    "TypeScript",
+    "React",
+    "Shared UI package",
+    "Route handlers",
+    "Optional Sheets & Slack integration"
+  ],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/portfolio-templates/tree/main/apps/form-to-sheet",
+    "live": "https://tpl-form-to-sheet.vercel.app"
+  },
+  "zh": {
+    "title": "表单 → 表格 / Slack 模板",
+    "summary": "作品集演示：联系表单 POST 到模拟 JSON，可选接 Google 表格与 Slack，类似 Formspree 自托管方案。",
+    "problem": "小网站需要把表单可靠地送到表格或团队频道，又不想按席位付表单 SaaS 或写脆弱的一次性脚本。",
+    "solution": "自建作品集演示（apps/form-to-sheet）。无障碍联系表单提交到模拟 JSON API；模板说明如何接入 Google 表格追加与 Slack incoming webhook。展示我在自动化项目里常用的集成方式——自有端点、自有数据。"
+  }
+}
