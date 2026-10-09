@@ -6,6 +6,7 @@
   "draft": false,
   "featured": true,
   "image": "/work/ai-app-launch-rescue/launch-rescue-after.png",
+  "secondaryImage": "/work/ai-app-launch-rescue/launch-rescue-before-xss.png",
   "problem": "AI-generated apps (Lovable/Bolt-style) often work in a demo but are unsafe to launch. NoteFlow was a half-built notes app with AI summaries—typical of that pattern: secrets in the client, missing auth, and XSS risk.",
   "solution": "Self-built portfolio demo aligned with my Fix & launch service: static scan found 7 issues before remediation and 0 after. Critical fixes included an OpenAI API key exposed in the browser bundle (VITE_ env var), OpenAI called from the browser, XSS via dangerouslySetInnerHTML, and no auth for shared notes. I moved AI calls server-side, added JWT auth and rate limiting, and added unit + end-to-end tests. Lighthouse accessibility improved from 0.83 to 1.00 (measured locally). Deliverables include the production-ready app and a written audit report.",
   "stack": [
