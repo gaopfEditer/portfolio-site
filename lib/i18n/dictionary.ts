@@ -32,16 +32,82 @@ const en = {
         title: "Workflow automation & AI integration",
         description:
           "Connect n8n, Zapier, Make, or custom Python/Node.js flows. Chatbots with OpenAI or Claude, PDF and email data extraction, and AI agents that follow your rules.",
+        advantages: [
+          "Connect tools you already use instead of replacing them",
+          "Grounded AI answers with sources—not open-ended guessing",
+          "Hand off to a human when automation should stop",
+          "Reusable templates you can extend later",
+        ],
       },
       {
         title: "Fix & launch your app",
         description:
           "Fix, finish, and deploy existing web apps—including ones built with Lovable, Cursor, or Bolt. I start with a short audit report so you know what is wrong before we build.",
+        advantages: [
+          "Short written audit before big refactors",
+          "Security headers, auth, and env secrets handled properly",
+          "Before → after proof you can share with stakeholders",
+          "Ship to production with tests where it matters",
+        ],
       },
       {
         title: "Custom development & scraping",
         description:
           "Full-stack web apps and dashboards. Playwright browser automation and web scraping when you need reliable data from the open web.",
+        advantages: [
+          "Public-data-only framing—no bypassing paywalls or ToS",
+          "Dashboards operators can actually use day to day",
+          "Alerts when meaningful data changes—not noise",
+          "Maintainable pipelines in TypeScript or Python",
+        ],
+      },
+    ],
+  },
+  faqWidget: {
+    toggleLabel: "Open quick help assistant",
+    closeLabel: "Close help panel",
+    panelTitle: "Quick answers",
+    welcome: "Hi! Pick a question below—I’ll show a short answer. For a custom scope, use Contact or Get a quote.",
+    backToQuestions: "← All questions",
+    ctaQuote: "Get a quote",
+    ctaContact: "Contact",
+    ctaWork: "See work",
+    chips: [
+      {
+        id: "services",
+        question: "What services do you offer?",
+        answer:
+          "Three main areas: workflow automation & AI integration (connect n8n/Zapier/Make or custom code), fix & launch your app (audit-first for Lovable/Cursor/Bolt projects), and custom development & scraping (dashboards and Playwright pipelines). See the Services section for detail.",
+      },
+      {
+        id: "pricing",
+        question: "Typical starting prices / how pricing works",
+        answer:
+          "Listed “starting from” prices on the site are entry points for small, scoped tasks—automation from about $120 USD, app audit/fix from about $90 USD, scraping from about $80 USD. Larger work gets a written fixed quote after we agree on scope.",
+      },
+      {
+        id: "timeline",
+        question: "How long does a small project take?",
+        answer:
+          "Many small integrations or fixes land in about 1–2 weeks once scope is clear. I share a timeline in the written plan before work starts and ship a thin working slice early when possible.",
+      },
+      {
+        id: "lovable",
+        question: "Can you fix Lovable/Bolt/Cursor apps?",
+        answer:
+          "Yes—that’s a common Fix & launch engagement. I start with a short audit (secrets in the client, auth gaps, XSS, deploy config), then remediate and help you ship. The NoteFlow and Launch Audit Report demos on this site show that workflow.",
+      },
+      {
+        id: "scraping",
+        question: "Do you do scraping / automation?",
+        answer:
+          "Yes—workflow automation (APIs, webhooks, AI steps) and custom scraping with Playwright when you need reliable public-web data. I only work with data you’re allowed to collect and document the pipeline so you can maintain it.",
+      },
+      {
+        id: "start",
+        question: "How do we start?",
+        answer:
+          "Use the contact form with what you do by hand today, your tools, and rough budget/timeline. I reply within about one business day with clarifying questions or a short plan. You can also browse Work demos and hire via Upwork.",
       },
     ],
   },
@@ -173,15 +239,81 @@ const zh = {
         title: "工作流自动化与 AI 集成",
         description:
           "连接 n8n、Zapier、Make，或自写 Python/Node.js 流程。OpenAI 或 Claude 客服、PDF/邮件数据提取、按规则运行的 AI agent。",
+        advantages: [
+          "对接你已在用的工具，而不是推倒重来",
+          "有出处的 AI 回答，而不是随意编造",
+          "该人工接手时顺畅转交",
+          "可复用的模板，方便后续扩展",
+        ],
       },
       {
         title: "修复并上线你的应用",
         description:
           "修复、补全并部署现有 Web 应用，包括 Lovable、Cursor、Bolt 生成的项目。先做简短体检报告，再动手改。",
+        advantages: [
+          "大改前先给简短书面审计",
+          "处理好安全头、登录与环境密钥",
+          "修复前后对比，方便对内说明",
+          "该测的地方补测试，并协助上线",
+        ],
       },
       {
         title: "定制开发与爬虫",
         description: "全栈 Web 应用与仪表盘。需要可靠抓取公开网页数据时用 Playwright 自动化与爬虫。",
+        advantages: [
+          "只处理你有权采集的公开数据",
+          "运营同事日常能用的仪表盘",
+          "有意义的变化才告警，而不是噪音",
+          "TypeScript 或 Python 的可维护流水线",
+        ],
+      },
+    ],
+  },
+  faqWidget: {
+    toggleLabel: "打开快速问答助手",
+    closeLabel: "关闭问答面板",
+    panelTitle: "常见问题",
+    welcome: "你好！点下面一个问题，我会给出简短回答。若要定制方案，请用「联系」或「获取报价」。",
+    backToQuestions: "← 全部问题",
+    ctaQuote: "获取报价",
+    ctaContact: "联系",
+    ctaWork: "查看作品",
+    chips: [
+      {
+        id: "services",
+        question: "你提供哪些服务？",
+        answer:
+          "主要有三块：工作流自动化与 AI 集成（n8n/Zapier/Make 或自写代码）、修复并上线应用（Lovable/Cursor/Bolt 项目先做审计）、定制开发与爬虫（仪表盘与 Playwright 流水线）。详情见「服务」区块。",
+      },
+      {
+        id: "pricing",
+        question: "起步价 / 报价怎么算？",
+        answer:
+          "网站上的「起价」是小范围任务的参考：自动化约 120 美元起、应用审计/修复约 90 美元起、爬虫约 80 美元起。范围更大时，先对齐需求再给书面固定报价。",
+      },
+      {
+        id: "timeline",
+        question: "小项目一般要多久？",
+        answer:
+          "范围清楚后，很多小集成或修复大约 1–2 周。开工前会给书面计划和时间线，并尽量先交付一条可跑通的最小版本。",
+      },
+      {
+        id: "lovable",
+        question: "能修 Lovable/Bolt/Cursor 做的应用吗？",
+        answer:
+          "可以，这是「修复并上线」里很常见的需求。先做简短审计（客户端密钥、登录缺口、XSS、部署配置等），再修复并协助上线。本站 NoteFlow 与上线审计报告演示就是这类流程。",
+      },
+      {
+        id: "scraping",
+        question: "做爬虫 / 自动化吗？",
+        answer:
+          "做——包括工作流自动化（API、webhook、AI 步骤）以及需要可靠公开网页数据时的 Playwright 爬虫。只处理合法可采集的数据，并写好文档方便你维护。",
+      },
+      {
+        id: "start",
+        question: "怎么开始合作？",
+        answer:
+          "在联系表单里说明现在手工在做什么、用的工具、大致预算和时间。通常一个工作日内回复。也可以先看「作品」演示，或通过 Upwork 雇佣。",
       },
     ],
   },

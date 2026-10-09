@@ -1,0 +1,29 @@
+{
+  "slug": "landing-waitlist",
+  "title": "Waitlist Landing Template",
+  "summary": "Portfolio demo: high-converting waitlist landing page with lead capture form and mock webhook — reusable template for product launches.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/landing-waitlist/hero.png",
+  "problem": "Teams launching a new product need a focused landing page that collects emails without standing up a full marketing stack on day one.",
+  "solution": "Self-built portfolio demo from the portfolio-templates monorepo (apps/landing-waitlist). Clean hero, social proof placeholders, and a waitlist form that POSTs to a mock webhook endpoint so you can swap in Zapier, n8n, or your API later. Strengthens my workflow automation & AI integration offering and shows evergreen landing-page demand.",
+  "stack": [
+    "Next.js 15",
+    "TypeScript",
+    "React",
+    "Shared UI package",
+    "Tailwind CSS",
+    "Mock webhook lead capture"
+  ],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/portfolio-templates/tree/main/apps/landing-waitlist",
+    "live": "https://tpl-landing-waitlist.vercel.app"
+  },
+  "zh": {
+    "title": "候补名单落地页模板",
+    "summary": "作品集演示：高转化候补名单落地页 + 留资表单与模拟 webhook，适合产品发布前收集邮箱。",
+    "problem": "新产品上线时需要专注的落地页收集邮箱，但第一天不想搭完整营销技术栈。",
+    "solution": "自建作品集演示，来自 portfolio-templates  monorepo（apps/landing-waitlist）。简洁主视觉、可替换的社会证明位，以及 POST 到模拟 webhook 的候补表单，之后可换成 Zapier、n8n 或自有 API。对应工作流自动化与 AI 集成能力，也展示落地页类需求的普遍性。"
+  }
+}

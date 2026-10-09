@@ -1,0 +1,29 @@
+{
+  "slug": "launch-audit-report",
+  "title": "Launch Audit Report Template",
+  "summary": "Portfolio demo: before/after security and launch hardening teaching flow with a printable audit checklist — aligns with Fix & launch your app.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/launch-audit-report/audit-report.png",
+  "problem": "Founders shipping AI-generated or rushed apps often do not know what “launch-ready” means until something breaks in production.",
+  "solution": "Self-built portfolio demo (apps/launch-audit-report). Walks through typical pre-launch checks (headers, auth, env secrets, XSS surfaces) with before/after examples and a printable checklist — educational, not a fake client scorecard. Pairs with my short audit-first Fix & launch service.",
+  "stack": [
+    "Next.js 15",
+    "TypeScript",
+    "React",
+    "Shared UI package",
+    "Print-friendly checklist",
+    "Security teaching demo"
+  ],
+  "links": {
+    "repo": "https://github.com/gaopfEditer/portfolio-templates/tree/main/apps/launch-audit-report",
+    "live": "https://tpl-launch-audit-report.vercel.app"
+  },
+  "zh": {
+    "title": "上线审计报告模板",
+    "summary": "作品集演示：上线前安全与加固的前后对比教学流程 + 可打印审计清单，对应「修复并上线你的应用」。",
+    "problem": "用 AI 生成或赶工上线的应用，创始人往往直到生产出问题才意识到什么叫「可以上线」。",
+    "solution": "自建作品集演示（apps/launch-audit-report）。逐步展示常见上线前检查（响应头、登录、环境密钥、XSS 面）及前后对比，并提供可打印清单——用于教学，不是虚构客户评分。与先做简短审计再动手的「修复并上线」服务一致。"
+  }
+}
