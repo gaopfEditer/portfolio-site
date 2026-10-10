@@ -49,7 +49,7 @@ export function Services() {
             <li
               key={service.title}
               tabIndex={0}
-              className={`service-card group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 dark:border-slate-800 dark:bg-slate-900 motion-safe:hover:-translate-y-1 motion-safe:hover:border-brand-300 motion-safe:hover:shadow-lg motion-safe:hover:shadow-brand-500/10 dark:motion-safe:hover:border-brand-600 ${
+              className={`service-card group flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-300 dark:border-slate-800 dark:bg-slate-900 motion-safe:hover:border-brand-300 motion-safe:hover:shadow-brand-500/20 dark:motion-safe:hover:border-brand-600 md:motion-safe:hover:-translate-y-2 md:motion-safe:hover:scale-[1.02] md:motion-safe:hover:shadow-xl ${
                 visible ? "service-card-visible" : "service-card-hidden"
               }`}
               style={{ transitionDelay: visible ? `${index * 90}ms` : undefined }}

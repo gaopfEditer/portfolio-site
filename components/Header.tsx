@@ -1,14 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
 import { useLanguage } from "@/components/LanguageProvider";
 import { siteConfig } from "@/site.config";
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { t } = useLanguage();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   const n = t.nav;
 
   const nav = [
@@ -20,7 +28,13 @@ export function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-slate-50/90 backdrop-blur-md dark:border-slate-800 dark:bg-slate-950/90">
+    <header
+      className={`site-header sticky top-0 z-40 border-b transition-[background-color,box-shadow,border-color,backdrop-filter] duration-300 dark:border-slate-800 ${
+        scrolled
+          ? "border-slate-200/70 bg-white/80 shadow-sm shadow-slate-900/5 backdrop-blur-lg dark:bg-slate-950/85 dark:shadow-black/20"
+          : "border-slate-200/80 bg-slate-50/90 backdrop-blur-md dark:bg-slate-950/90"
+      }`}
+    >
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <Link
           href="/"
@@ -41,10 +55,7 @@ export function Header() {
             </Link>
           ))}
           <LanguageSwitch />
-          <Link
-            href="/#contact"
-            className="rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-brand-700"
-          >
+          <Link href="/#contact" className="btn-primary px-4 py-2 text-sm font-medium">
             {n.getQuote}
           </Link>
         </nav>
@@ -93,7 +104,7 @@ export function Header() {
             <li>
               <Link
                 href="/#contact"
-                className="inline-block rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white"
+                className="btn-primary inline-block px-4 py-2 text-sm font-medium"
                 onClick={() => setOpen(false)}
               >
                 {n.getQuote}

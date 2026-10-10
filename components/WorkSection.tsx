@@ -41,16 +41,20 @@ export function WorkSection({ cases }: Props) {
             return (
               <li
                 key={item.slug}
-                className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950"
+                className="work-card group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-950"
               >
                 <div className="grid gap-6 md:grid-cols-2 md:gap-0">
-                  <div className="relative aspect-video md:aspect-auto md:min-h-[240px]">
+                  <div className="relative aspect-video overflow-hidden md:aspect-auto md:min-h-[240px]">
                     <Image
                       src={item.image}
                       alt=""
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-500 ease-out motion-safe:md:group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <span
+                      className="pointer-events-none absolute inset-0 bg-brand-950/0 transition-colors duration-500 motion-safe:md:group-hover:bg-brand-950/10 dark:motion-safe:md:group-hover:bg-brand-400/10"
+                      aria-hidden
                     />
                   </div>
                   <div className="flex flex-col justify-center p-6 md:p-8">

@@ -20,10 +20,7 @@ export function Hero() {
         <p className="mt-6 max-w-2xl text-lg text-slate-600 dark:text-slate-300">{h.description}</p>
         <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">{h.location}</p>
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            href="/#work"
-            className="inline-flex items-center justify-center rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-700"
-          >
+          <Link href="/#work" className="btn-primary inline-flex items-center justify-center px-6 py-3 text-sm font-semibold">
             {h.seeWork}
           </Link>
           <Link
