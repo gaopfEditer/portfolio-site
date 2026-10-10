@@ -76,6 +76,22 @@
     }
   }
 
+  .btn-primary {
+    @apply rounded-lg bg-brand-600 text-white shadow-sm transition-[transform,background-color,box-shadow] duration-200 ease-out;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover:not(:disabled) {
+      @apply bg-brand-700 shadow-md shadow-brand-600/25;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .btn-primary:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .service-card-hidden {
       @apply translate-y-0 opacity-100;
@@ -83,23 +99,49 @@
 
     .service-card,
     .service-advantages,
-    .service-advantage-item {
+    .service-advantage-item,
+    .work-card img {
       transition: none !important;
     }
 
     .faq-avatar-pulse,
-    .faq-avatar-btn {
+    .faq-avatar-glow,
+    .faq-avatar-face,
+    .faq-panel {
       animation: none !important;
     }
   }
 
-  @keyframes faq-bob {
+  @keyframes faq-avatar-scale {
     0%,
     100% {
-      transform: translateY(0);
+      transform: scale(1);
     }
     50% {
-      transform: translateY(-4px);
+      transform: scale(1.06);
+    }
+  }
+
+  @keyframes faq-avatar-scale-mobile {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+
+  @keyframes faq-avatar-nod {
+    0%,
+    100% {
+      transform: scale(1) translateY(0);
+    }
+    35% {
+      transform: scale(1.03) translateY(2px);
+    }
+    55% {
+      transform: scale(1.03) translateY(-3px);
     }
   }
 
@@ -107,21 +149,94 @@
     0%,
     100% {
       transform: scale(1);
-      opacity: 0.35;
+      opacity: 0.45;
     }
     50% {
-      transform: scale(1.08);
-      opacity: 0.1;
+      transform: scale(1.12);
+      opacity: 0.08;
     }
   }
 
+  @keyframes faq-glow-breathe {
+    0%,
+    100% {
+      opacity: 0.55;
+      box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.35), 0 8px 24px rgba(2, 132, 199, 0.22);
+    }
+    50% {
+      opacity: 0.85;
+      box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.12), 0 12px 32px rgba(2, 132, 199, 0.28);
+    }
+  }
+
+  @keyframes faq-panel-in {
+    from {
+      opacity: 0;
+      transform: translateX(1.25rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes faq-panel-shadow {
+    0%,
+    100% {
+      box-shadow:
+        0 20px 40px -12px rgba(15, 23, 42, 0.18),
+        0 0 0 1px rgba(56, 189, 248, 0.06);
+    }
+    50% {
+      box-shadow:
+        0 24px 48px -10px rgba(2, 132, 199, 0.22),
+        0 0 0 1px rgba(56, 189, 248, 0.14);
+    }
+  }
+
+  .faq-avatar-glow {
+    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.35), 0 8px 24px rgba(2, 132, 199, 0.22);
+  }
+
+  .faq-avatar-pulse {
+    border: 2px solid rgba(56, 189, 248, 0.38);
+  }
+
+  .faq-avatar-btn-engaged .faq-avatar-pulse {
+    opacity: 0.25;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
-    .faq-avatar-btn {
-      animation: faq-bob 3.5s ease-in-out infinite;
+    .faq-avatar-face {
+      animation: faq-avatar-scale 1.5s ease-out infinite;
+    }
+
+    .faq-avatar-btn-engaged .faq-avatar-face {
+      animation: faq-avatar-nod 2.2s ease-in-out infinite;
     }
 
     .faq-avatar-pulse {
-      animation: faq-pulse-ring 2.8s ease-in-out infinite;
+      animation: faq-pulse-ring 1.5s ease-out infinite;
+    }
+
+    .faq-avatar-glow {
+      animation: faq-glow-breathe 1.5s ease-out infinite;
+    }
+
+    .faq-panel {
+      animation:
+        faq-panel-in 0.4s ease-out both,
+        faq-panel-shadow 4s ease-in-out 0.4s infinite;
+    }
+
+    @media (max-width: 640px) {
+      .faq-avatar-btn:not(.faq-avatar-btn-engaged) .faq-avatar-face {
+        animation: faq-avatar-scale-mobile 2s ease-out infinite;
+      }
+
+      .faq-avatar-btn-engaged .faq-avatar-face {
+        animation: faq-avatar-nod 2.4s ease-in-out infinite;
+      }
     }
 
     .service-card-visible .service-check {

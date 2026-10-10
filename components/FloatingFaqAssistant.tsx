@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -26,6 +27,7 @@ export function FloatingFaqAssistant() {
   const titleId = useId();
 
   const activeChip = f.chips.find((c) => c.id === activeId);
+  const avatarEngaged = open || activeId !== null;
 
   const close = useCallback(() => {
     setOpen(false);
@@ -131,7 +133,7 @@ export function FloatingFaqAssistant() {
                   close();
                   scrollToContact(true);
                 }}
-                className="rounded-lg bg-brand-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-brand-700"
+                className="btn-primary px-3 py-1.5 text-sm font-medium"
               >
                 {f.ctaQuote}
               </button>
@@ -141,7 +143,7 @@ export function FloatingFaqAssistant() {
                   close();
                   scrollToContact(true);
                 }}
-                className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-800 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-800"
+                className="rounded-lg border border-slate-300 px-3 py-1.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 dark:border-slate-600 dark:text-slate-100 dark:hover:bg-slate-800"
               >
                 {f.ctaContact}
               </button>
@@ -160,20 +162,26 @@ export function FloatingFaqAssistant() {
           ref={toggleRef}
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="faq-avatar-btn group relative flex h-14 w-14 items-center justify-center rounded-full border-2 border-brand-200 bg-gradient-to-br from-brand-50 to-white shadow-lg ring-4 ring-white/80 transition hover:scale-105 hover:border-brand-400 dark:border-brand-700 dark:from-slate-800 dark:to-slate-900 dark:ring-slate-950/80"
+          className={`faq-avatar-btn group relative flex h-14 w-14 items-center justify-center rounded-full p-0 transition-shadow duration-300 focus-visible:outline-offset-4 motion-safe:hover:shadow-[0_0_28px_rgba(56,189,248,0.55)] dark:motion-safe:hover:shadow-[0_0_28px_rgba(14,165,233,0.45)] ${
+            avatarEngaged ? "faq-avatar-btn-engaged" : ""
+          }`}
           aria-expanded={open}
           aria-haspopup="dialog"
           aria-label={open ? f.closeLabel : f.toggleLabel}
         >
-          <svg viewBox="0 0 64 64" className="h-10 w-10" aria-hidden role="img">
-            <rect x="14" y="18" width="36" height="32" rx="8" className="fill-brand-500 dark:fill-brand-600" />
-            <rect x="20" y="26" width="8" height="8" rx="2" className="fill-white" />
-            <rect x="36" y="26" width="8" height="8" rx="2" className="fill-white" />
-            <rect x="26" y="40" width="12" height="4" rx="2" className="fill-brand-200" />
-            <circle cx="32" cy="12" r="4" className="fill-brand-400" />
-            <line x1="32" y1="8" x2="32" y2="4" stroke="currentColor" strokeWidth="2" className="text-brand-500" />
-          </svg>
-          <span className="faq-avatar-pulse absolute inset-0 rounded-full border-2 border-brand-400/40" aria-hidden />
+          <span className="faq-avatar-face relative z-10 h-full w-full overflow-hidden rounded-full ring-2 ring-brand-300/80 ring-offset-2 ring-offset-white dark:ring-brand-500/70 dark:ring-offset-slate-950">
+            <Image
+              src="/faq-assistant/friendly-bot@2x.png"
+              alt=""
+              width={56}
+              height={56}
+              className="h-full w-full object-cover object-center"
+              priority
+              aria-hidden
+            />
+          </span>
+          <span className="faq-avatar-glow pointer-events-none absolute inset-0 rounded-full" aria-hidden />
+          <span className="faq-avatar-pulse pointer-events-none absolute inset-0 rounded-full" aria-hidden />
         </button>
       </div>
     </div>
