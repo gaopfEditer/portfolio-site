@@ -98,13 +98,13 @@ export function FloatingFaqAssistant() {
             {!activeChip ? (
               <>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{f.welcome}</p>
-                <ul className="mt-3 flex max-h-[min(40vh,16rem)] flex-col gap-2 overflow-y-auto">
+                <ul className="faq-chip-list mt-3 flex max-h-[min(40vh,16rem)] flex-col gap-2 overflow-y-auto">
                   {f.chips.map((chip) => (
                     <li key={chip.id}>
                       <button
                         type="button"
                         onClick={() => setActiveId(chip.id)}
-                        className="w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-left text-sm text-slate-800 transition hover:border-brand-300 hover:bg-brand-50 dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-100 dark:hover:border-brand-600"
+                        className="faq-chip-btn"
                       >
                         {chip.question}
                       </button>

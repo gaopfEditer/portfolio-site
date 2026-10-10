@@ -76,6 +76,60 @@
     }
   }
 
+  .faq-chip-list {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(148 163 184 / 0.85) rgb(226 232 240 / 0.45);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .faq-chip-list {
+      scrollbar-color: rgb(71 85 105 / 0.9) rgb(30 41 59 / 0.55);
+    }
+  }
+
+  .faq-chip-list::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .faq-chip-list::-webkit-scrollbar-track {
+    margin-block: 2px;
+    background: rgb(226 232 240 / 0.45);
+    border-radius: 9999px;
+  }
+
+  .faq-chip-list::-webkit-scrollbar-thumb {
+    background-color: rgb(148 163 184 / 0.85);
+    border-radius: 9999px;
+  }
+
+  .faq-chip-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(14 165 233 / 0.75);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .faq-chip-list::-webkit-scrollbar-track {
+      background: rgb(30 41 59 / 0.55);
+    }
+
+    .faq-chip-list::-webkit-scrollbar-thumb {
+      background-color: rgb(71 85 105 / 0.9);
+    }
+
+    .faq-chip-list::-webkit-scrollbar-thumb:hover {
+      background-color: rgb(2 132 199 / 0.85);
+    }
+  }
+
+  .faq-chip-btn {
+    @apply w-full rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-left text-sm font-normal text-slate-800 transition-[background-color,border-color,color,box-shadow] duration-150;
+    @apply dark:border-slate-700 dark:bg-slate-800/80 dark:text-slate-100;
+    @apply hover:border-brand-300 hover:bg-brand-50 hover:text-slate-800 dark:hover:border-brand-600 dark:hover:bg-brand-950/40 dark:hover:text-slate-100;
+    @apply focus:outline-none focus:bg-slate-50 focus:text-slate-800 dark:focus:bg-slate-800/80 dark:focus:text-slate-100;
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 focus-visible:ring-2 focus-visible:ring-brand-500/25;
+    @apply active:border-brand-300 active:bg-brand-50 active:text-brand-900 dark:active:border-brand-600 dark:active:bg-brand-950/40 dark:active:text-brand-100;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .btn-primary {
     @apply rounded-lg bg-brand-600 text-white shadow-sm transition-[transform,background-color,box-shadow] duration-200 ease-out;
   }
