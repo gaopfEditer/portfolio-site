@@ -95,7 +95,7 @@ const en = {
         id: "lovable",
         question: "Can you fix Lovable/Bolt/Cursor apps?",
         answer:
-          "Yes—that’s a common Fix & launch engagement. I start with a short audit (secrets in the client, auth gaps, XSS, deploy config), then remediate and help you ship. The NoteFlow and Launch Audit Report demos on this site show that workflow.",
+          "Yes—that’s a common Fix & launch engagement. I start with a short audit (secrets in the client, auth gaps, XSS, deploy config), then remediate and help you ship. The Launch Audit Report demo on this site shows that workflow.",
       },
       {
         id: "scraping",
@@ -301,7 +301,7 @@ const zh = {
         id: "lovable",
         question: "能修 Lovable/Bolt/Cursor 做的应用吗？",
         answer:
-          "可以，这是「修复并上线」里很常见的需求。先做简短审计（客户端密钥、登录缺口、XSS、部署配置等），再修复并协助上线。本站 NoteFlow 与上线审计报告演示就是这类流程。",
+          "可以，这是「修复并上线」里很常见的需求。先做简短审计（客户端密钥、登录缺口、XSS、部署配置等），再修复并协助上线。本站「上线审计报告」演示就是这类流程。",
       },
       {
         id: "scraping",
