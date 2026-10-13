@@ -19,7 +19,7 @@
   ],
   "links": {
     "repo": "https://github.com/gaopfEditer/ai-document-extractor",
-    "live": ""
+    "live": "https://ai-document-extractor.vercel.app"
   },
   "zh": {
     "title": "AI 文档提取器",
