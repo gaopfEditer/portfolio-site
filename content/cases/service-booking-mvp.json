@@ -1,0 +1,30 @@
+{
+  "slug": "service-booking-mvp",
+  "title": "Service Booking MVP (deposit + dynamic fields)",
+  "summary": "Portfolio demo template: guest browse → pick service → lock slot → optional deposit; intake fields change per SKU (home visit address, salon notes, etc.) — config, not rebuild.",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/service-booking-mvp/hero.png",
+  "secondaryImage": "/work/service-booking-mvp/simple-template.png",
+  "problem": "Freelance booking jobs often need more than a Calendly embed: service catalogs, deposits, and per-SKU intake fields (address, pet breed, vehicle type). Rebuilding the front end for each vertical is slow and hard to demo credibly.",
+  "solution": "Self-built portfolio demo (not a client delivery). The H5 MVP at bz.a shows the standard path: browse services without a login wall, pick a slot with double-booking protection, fill dynamic fields that vary by SKU, and optionally pay a deposit when payments are enabled.\n\nSimple vs complex on the same stack: the lightweight calendar template (tpl-booking-calendar.vercel.app) covers single-resource week view + confirmation — enough for bid screenshots. The bz.a H5 adds catalog, deposit/tail payment states, and configurable intake — proof of a full business MVP without a separate rebuild per industry.\n\nScreenshots are illustrative demo UI, not real client brands or revenue claims.",
+  "stack": [
+    "Uni-app H5",
+    "Vue",
+    "Service catalog",
+    "Slot locking / conflict checks",
+    "Dynamic intake fields",
+    "Optional deposit payments"
+  ],
+  "links": {
+    "repo": "",
+    "live": "https://bz.a.ezcoin.ink/h5/"
+  },
+  "zh": {
+    "title": "服务预约 MVP（订金 + 动态字段）",
+    "summary": "作品集演示模板：访客浏览 → 选服务 → 锁档 → 可选订金；按 SKU 切换 intake 字段（上门地址、沙龙备注等）——改配置，不重做前端。",
+    "problem": "接单里的预约需求往往不止 Calendly 嵌入：要有服务目录、订金、以及按 SKU 变的 intake（地址、宠物品种、车型等）。每个行业重做一套前端又慢又难在投标里讲清楚。",
+    "solution": "自建作品集演示（非客户交付）。bz.a 的 H5 展示标准路径：免注册浏览服务、防双订选档、按 SKU 填动态字段、支付开关打开时可付订金。\n\n同一技术栈上的「简单 vs 复杂」：轻量日历模板（tpl-booking-calendar.vercel.app）覆盖单资源周历 + 确认页，投标截图够用；bz.a H5 叠加目录、订金/尾款状态与可配置 intake，证明完整业务 MVP，无需每个行业单独重做。\n\n截图均为演示 UI，非真实客户品牌或收入数据。"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "slug": "multi-provider-content-booking",
+  "title": "Multi-Provider Schedule + Content → Booking",
+  "summary": "Portfolio demo: content feed and provider profiles funnel into bookable slots — multi-provider time conflict handled in one H5 shell (compliance-friendly showcase narrative).",
+  "status": "published",
+  "draft": false,
+  "featured": true,
+  "image": "/work/multi-provider-content-booking/feed-booking.png",
+  "problem": "Marketplaces and creator-led services need discovery (feed or profile) tied to real availability. A single Calendly link per person does not show multi-provider scheduling or a content-to-booking funnel in one demo.",
+  "solution": "Self-built portfolio demo (not a client delivery). smart.a H5 combines a content-oriented surface with per-provider bookable windows and order flow — the same backend ideas as bz.a, extended to a people × time matrix. Useful for tutoring packs, multi-stylist salons, or any multi-provider schedule story without claiming a specific live client.\n\nDemo screenshots are template UI only; no fabricated client names or metrics.",
+  "stack": [
+    "Uni-app H5",
+    "Vue",
+    "Content feed / profiles",
+    "Multi-provider calendars",
+    "Conflict-aware slot selection",
+    "Guest checkout flow"
+  ],
+  "links": {
+    "repo": "",
+    "live": "https://smart.a.ezcoin.ink/h5/"
+  },
+  "zh": {
+    "title": "多服务者排期 + 内容 → 预约",
+    "summary": "作品集演示：内容流与服务者主页导向可订时段，同一 H5 壳内处理多服务者时间冲突（合规对外叙事，非敏感行业表述）。",
+    "problem": "平台型或创作者带单的业务需要「被发现」和「可订档」连在一起。每人一个 Calendly 链接无法在一个 demo 里展示多服务者排期与内容到下单的漏斗。",
+    "solution": "自建作品集演示（非客户交付）。smart.a H5 把偏内容的浏览面与各服务者可订窗口、下单流程接在一起——与 bz.a 同源思路，扩展到人×时间矩阵。适合私教课包、多技师沙龙等叙事，不虚构具体客户或数据。\n\n截图为模板 UI，非真实客户品牌。"
+  }
+}

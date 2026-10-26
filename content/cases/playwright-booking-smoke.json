@@ -1,0 +1,28 @@
+{
+  "slug": "playwright-booking-smoke",
+  "title": "Playwright Booking Smoke Path",
+  "summary": "Engineering showcase: automated browser smoke — pick service → confirm — so bz.a H5 booking paths stay repeatable for demos and regression, not a separate product.",
+  "status": "published",
+  "draft": false,
+  "featured": false,
+  "image": "/work/playwright-booking-smoke/smoke-path.png",
+  "problem": "Live H5 demos drift after deploys. Without a short automated path, showcase CTAs and bid videos can break silently between recordings.",
+  "solution": "Portfolio-side automation practice aligned with the booking demos: a Playwright smoke script walks the guest path (select service → slot → confirmation) against the bz.a H5 demo. Outcome is pass/fail signal and optional CI screenshots — not a hosted video URL on this case page. Same evidence chain as「展示站 CTA → H5 live demo」; validates the path before you record a 60s clip.\n\nNo client attribution; exercises the public demo environment only.",
+  "stack": [
+    "Playwright",
+    "TypeScript",
+    "Headless Chromium",
+    "Smoke / regression checks",
+    "CI-friendly reporting"
+  ],
+  "links": {
+    "repo": "",
+    "live": "https://bz.a.ezcoin.ink/h5/"
+  },
+  "zh": {
+    "title": "Playwright 预约冒烟路径",
+    "summary": "工程展示：浏览器自动化冒烟——选服务 → 确认——让 bz.a H5 预约路径在演示与回归中可重复，非独立产品。",
+    "problem": "H5 上线后界面容易悄悄变样。没有一条短自动化路径，展示站 CTA 和投标录屏可能在两次录制之间已经坏了。",
+    "solution": "与预约 demo 同一条证据链的作品集自动化实践：Playwright 冒烟脚本走访客路径（选服务 → 时段 → 确认），目标为 bz.a H5 演示环境。产出是通过/失败信号与可选 CI 截图——本案例页不提供虚构的视频链接。与「展示站 CTA → H5」一致，录 60 秒前先验路径。\n\n不挂靠客户；仅针对公开 demo 环境。"
+  }
+}
